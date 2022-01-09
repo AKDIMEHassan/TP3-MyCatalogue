@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Produits</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap.min.css"/>
+</head>
+<body>
+   <div class="card">
+     <div class="card-header">Liste de produits</div>
+     <div class="card-body">
+     </div>
+   </div>
+    <table class="table">
+      <tr>
+         <th>ID</th><th>DES</th><th>Prix</th><th>Quantite</th>
+      </tr>
+      <tr th:each="p:${listProduits}">
+          <td th:text="${p.id}"></td>
+          <td th:text="${p.designation}"></td>
+          <td th:text="${p.prix}"></td>
+          <td th:text="${p.quantite}"></td>
+       </tr>
+    </table>
+</body>
+</html>
